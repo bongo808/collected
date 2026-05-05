@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>fr</string>
+    <key>CFBundleDisplayName</key>
+    <string>BikeTracker</string>
+    <key>CFBundleExecutable</key>
+    <string>$(EXECUTABLE_NAME)</string>
+    <key>CFBundleIdentifier</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>$(PRODUCT_NAME)</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>UILaunchScreen</key>
+    <dict/>
+    <key>UIRequiredDeviceCapabilities</key>
+    <array>
+        <string>arm64</string>
+        <string>gps</string>
+    </array>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+    </array>
+
+    <!-- Permissions -->
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>BikeTracker utilise votre position pour enregistrer vos sorties à vélo.</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>BikeTracker a besoin de votre position en arrière-plan pour détecter automatiquement vos trajets à vélo et les enregistrer même quand l'app est fermée.</string>
+    <key>NSMotionUsageDescription</key>
+    <string>BikeTracker utilise les capteurs de mouvement pour détecter automatiquement quand vous commencez à pédaler.</string>
+
+    <!-- Background modes: location + processing for auto-tracking -->
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>location</string>
+        <string>processing</string>
+    </array>
+
+    <!-- Custom URL scheme for Strava OAuth callback -->
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLName</key>
+            <string>com.biketracker.strava</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>biketracker</string>
+            </array>
+        </dict>
+    </array>
+
+    <!-- Strava credentials (REPLACE BEFORE BUILDING) -->
+    <key>StravaClientID</key>
+    <string>YOUR_STRAVA_CLIENT_ID</string>
+    <key>StravaClientSecret</key>
+    <string>YOUR_STRAVA_CLIENT_SECRET</string>
+</dict>
+</plist>
